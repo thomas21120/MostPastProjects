@@ -1,0 +1,4 @@
+function main returns boolean;
+begin
+	5 > 8 and 3 = 3 or 9 < 1 and (3 /= 7) or 6 <= 7 and 3 >= 9 or not not true;
+end;

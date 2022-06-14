@@ -1,0 +1,86 @@
+@startuml
+'https://plantuml.com/class-diagram
+skinparam BoxPadding 30
+
+class main_SWING extends Jframe{
+}
+class DrawCircle extends JPanel{
+    +getPreferedSize()
+    +paintComponent()
+}
+class DrawRectangle extends JPanel{
+    +getPreferedSize()
+    +paintComponent()
+}
+class DrawTriangle extends JPanel{
+    +getPreferedSize()
+    +paintComponent()
+}
+class DrawSquare extends JPanel{
+    +getPreferedSize()
+    +paintComponent()
+}
+class Shape {
++dimensions: int
++name: String
++getNumDimensions()
++getName()
+}
+class TwoDimensionalShape{
+    +dimension1: double
+    +dimension2: double
+    +getArea()
+}
+class ThreeDimensionalShape{
+    +dimension1: double
+    +dimension2: double
+    +dimension3: double
+    +getArea()
+}
+class Circle{
+}
+class Square{
+}
+class Triangle{
+}
+class Rectangle{
+}
+class Cone{
+}
+class Cube{
+}
+class Cylinder{
+}
+class Sphere{
+}
+class Torus{
+}
+class Create{
+    +getAreaOfCircle()
+    +getAreaOfTriangle()
+    +getAreaOfRectangle()
+    +getAreaOfSquare()
+    +getVolumeOfSphere()
+    +getVolumeOfCube()
+    +getVolumeOfCone()
+    +getVolumeOfCylinder()
+    +getVolumeOfTorus()
+}
+main_SWING -- Create
+Create -- Shape
+main_SWING -- DrawCircle
+main_SWING -- DrawTriangle
+main_SWING -- DrawSquare
+main_SWING -- DrawRectangle
+Shape <|-- TwoDimensionalShape
+TwoDimensionalShape <|-- Circle
+TwoDimensionalShape <|-- Triangle
+TwoDimensionalShape <|-- Square
+TwoDimensionalShape <|-- Rectangle
+Shape <|-- ThreeDimensionalShape
+ThreeDimensionalShape <|-- Cone
+ThreeDimensionalShape <|-- Cube
+ThreeDimensionalShape <|-- Cylinder
+ThreeDimensionalShape <|-- Sphere
+ThreeDimensionalShape <|-- Torus
+@enduml

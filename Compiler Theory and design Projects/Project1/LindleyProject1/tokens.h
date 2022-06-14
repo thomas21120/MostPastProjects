@@ -1,0 +1,8 @@
+// Compiler Theory and Design
+// Lindley, Thomas
+// 01NOV2021
+// This file contains the enumerated type definition for tokens
+
+enum Tokens {RELOP = 256, ADDOP, MULOP, ANDOP, NOTOP, OROP, REMOP, EXPOP, BEGIN_, BOOLEAN, ARROW,
+END, ENDREDUCE, FUNCTION, INTEGER, IS, CASE, ELSE, ENDCASE, ENDIF, IF, OTHERS, REAL, THEN, WHEN,
+REDUCE, RETURNS, IDENTIFIER, INT_LITERAL, BOOL_LITERAL, REAL_LITERAL};

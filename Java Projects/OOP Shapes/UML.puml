@@ -1,0 +1,62 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Shape {
++dimensions: String
+}
+class TwoDimensionalShape{
+    +area: double
+}
+class ThreeDimensionalShape{
+    +volume: double
+}
+class Circle{
+    +radius: double
+}
+class Square{
+    +edge: double
+}
+class Triangle{
+    +String typeOfTriangleByAngle()
+    +String typeOfTriangleBySides()
+    +base: double
+    +height: double
+    +largestAngle: double
+    +sideLeft: double
+    +sideRight: double
+}
+class Rectangle{
+    +length: double
+    +width: double
+}
+class Cone{
+    +radiusC: double
+    +heightC: double
+}
+class Cube{
+    +length: double
+    +width: double
+}
+class Cylinder{
+    +radius: double
+    +height: double
+}
+class Sphere{
+    +radius: double
+}
+class Torus{
+    +radiusMajor: double
+    +radiusMinor: double
+}
+Shape <|-- TwoDimensionalShape
+TwoDimensionalShape <|-- Circle
+TwoDimensionalShape <|-- Triangle
+TwoDimensionalShape <|-- Square
+TwoDimensionalShape <|-- Rectangle
+Shape <|-- ThreeDimensionalShape
+ThreeDimensionalShape <|-- Cone
+ThreeDimensionalShape <|-- Cube
+ThreeDimensionalShape <|-- Cylinder
+ThreeDimensionalShape <|-- Sphere
+ThreeDimensionalShape <|-- Torus
+@enduml
